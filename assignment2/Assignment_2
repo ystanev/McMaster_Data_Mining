@@ -1,0 +1,53 @@
+from numpy import loadtxt #Allows to load TXT.
+import array 
+import operator
+
+def createDataSet():
+    training_data=loadtxt("poker-hand-training.txt", delimiter = ",") #Reads in the TXT file.
+    lines=array([training_data]) # Assigns data form TXT file into array "lines"
+    labels=array(['0'],['1'],['2'],['3'],['4'],['5'],['6'],['7'],['8'],['9'])#Poker Hands #s
+    
+    for i in len(labels) #Looping though array Labels
+        if index=0:
+            print 'Nothing'
+        elif i=1:
+            print 'One Pair'
+        elif i=2:
+            print 'Two Pair'
+        elif i=3:
+            print 'Three of a Kind'
+        elif i=4:
+            print "Straight"
+        elif i=5:
+            print 'Flush'
+        elif i=6:
+            print 'Full House'
+        elif i=7:
+            print 'Four of a Kind'
+        elif i=8:
+            print 'Staight Flush'
+        else i=9:
+            print 'Royal Flush'
+    
+    return lines, labels
+
+#for i in range(0,len(lines)) 
+
+"""
+kNN Algorithm
+
+def classify0(inX, dataSet, labels, k):
+dataSetSize = dataSet.shape[0]
+diffMat = tile(inX, (dataSetSize,1)) – dataSet
+sqDiffMat = diffMat**2 
+sqDistances = sqDiffMat.sum(axis=1) 
+distances = sqDistances**0.5 
+sortedDistIndicies = distances.argsort()
+classCount={} 
+for i in range(k):
+voteIlabel = labels[sortedDistIndicies[i]] 
+classCount[voteIlabel]= classCount.get(voteIlabel,0) + 1 
+sortedClassCount = sorted(classCount.iteritems(), 
+key=operator.itemgetter(1), reverse=True) 
+return sortedClassCount[0][0]
+"""

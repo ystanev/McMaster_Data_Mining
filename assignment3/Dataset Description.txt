@@ -1,0 +1,20 @@
+Dataset Description:
+
+-----------------------------
+Binary  
+
+Male/Female - 0/1
+Survived/Died - 0/1
+-----------------------------
+Nominal
+
+Passenger Class - {0, 1, 2} - (first, second and third class)
+-----------------------------
+Numeric
+
+Age
+-----------------------------
+
+Datapoint Format:
+
+{Age, Male/Female, Passenger Class, Survived/Died}
